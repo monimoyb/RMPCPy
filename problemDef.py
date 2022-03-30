@@ -73,7 +73,7 @@ class ProblemParams:
 		# Stage cost weight matrices.
 		self.Q = np.array([[10.0, 0.0], 
 						   [0.0, 10.0]])
-		self.R = 2.0
+		self.R = np.array([[2.0]])
 
 		# MPC horizon, initial condition sample size. Set by user.
 		self.N = None
@@ -91,7 +91,7 @@ class ProblemParams:
 		self.Kv = -KvS.gain_matrix
 		
 		self.PNv = linalg.solve_discrete_lyapunov((self.Anom+\
-				   self.Bnom@self.Kv).T, self.Q+self.R*self.Kv.T@self.Kv)
+				   self.Bnom@self.Kv).T, self.Q+self.Kv.T@self.R@self.Kv)
 	
 		# These invariant sets will be computed when required.
 		self.E = None

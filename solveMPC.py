@@ -394,4 +394,5 @@ def solveRobustMpcOptimalTightening(xt,
 		return False
 
 	# Return the MPC feasibility flag. 
-	return sol.stats()['return_status'] == 'Solve_Succeeded'  	
+	return sol.stats()['return_status'] == 'Solve_Succeeded' 
+	 	

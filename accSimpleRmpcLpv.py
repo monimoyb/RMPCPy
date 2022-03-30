@@ -45,13 +45,13 @@ boldHu = params.U.A
 boldhu = params.U.b
 
 dictofMatricesH1 = dict(boldAbar=boldAbar,
-				  	  boldBbar=boldBbar,
-					  Fx=Fx,
-				      fx=fx,
-				      boldHw=boldHw,
-				      boldhw=boldhw,
-				      boldHu=boldHu,
-				      boldhu=boldhu)
+				  	  	boldBbar=boldBbar,
+					  	Fx=Fx,
+				      	fx=fx,
+				      	boldHw=boldHw,
+				      	boldhw=boldhw,
+				      	boldHu=boldHu,
+				      	boldhu=boldhu)
 
 for j in range(params.Nx):
 	solverSuccessFlag = False
